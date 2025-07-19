@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Project 3 - Aly Ahmed</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/all.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    </head>
+    
+    <body>     
+        <div class="main position-relative">
+            <nav class="navbar navbar-expand-lg bg-dark opacity-75 fixed-top" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <img class="rounded-circle me-4" src="images/logo.jpg" alt="" style="height:50px; width:50px;">
+                    <a class="navbar-brand text-info-emphasis fs-3" href="#">EGYPT TOUR</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Offers</a>
+                            </li>
+                            <li class="nav-item dropdown ">
+                                <a class="trips dropdown-toggle btn btn-outline-info bg-dark text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="spn text-light">T</span>rips</a>
+                                <ul class="dropdown-menu opacity-50">
+                                    <li><a class="dropdown-item" href="#">CAIRO</a></li>
+                                    <li><a class="dropdown-item" href="#">ALEX</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">LUXOR</a></li>
+                                    <li><a class="dropdown-item" href="#">ASWAN</a></li>
+                                    <li><a class="dropdown-item" href="#">SHARM EL SHIKH</a></li>
+                                    <li><a class="dropdown-item" href="#">EL GLALA</a></li>
+                                    <li><a class="dropdown-item" href="#">MORE ...</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" >About</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                            <button class="btn btn-outline-info me-2" type="submit">Search</button>
+                            <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
+                        </form>
+                    </div>
+                </div>
+                
+            </nav>
+            <div class="fixed-top vh-100 ms-auto text-white p-3 z-3 d-flex flex-column justify-content-center align-items-center" style="width:100px !important; background-color: gbra(0,0,0,0.7)">
+                <div class="w-auto h-50 d-flex flex-column justify-content-evenly align-items-center">
+                    <i class="icon fab fa-facebook-square text-opacity-25 text-info-emphasis"></i>
+                    <i class="icon fab fa-whatsapp-square text-opacity-25 text-info-emphasis"></i>
+                    <i class="icon fab fa-twitter-square text-opacity-25 text-info-emphasis"></i>
+                    <i class="icon fab fa-linkedin text-opacity-25 text-info-emphasis"></i>
+                    <i class="icon fab fa-instagram-square text-opacity-25 text-info-emphasis"></i>
+                </div>   
+            </div>
+            
+
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info">
+                            <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Login</h1>
+                            <button type="button" class="btn-close bg-info-subtle text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3 m-3">
+                                    <label for="exampleInputEmail1" class="form-label text-info">Email address</label>
+                                    <input type="email" class="form-control border-info" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                </div>
+                                <div class="mb-3 m-3">
+                                    <label for="exampleInputPassword1" class="form-label text-info">Password</label>
+                                    <input type="password" class="form-control border-info" id="exampleInputPassword1">
+                                </div>
+                                <div class="form-check form-switch m-4">
+                                    <input class="form-check-input bg-info" type="checkbox" role="switch" id="switchCheckChecked" checked>
+                                    <label class="form-check-label" for="switchCheckChecked">Remember me</label>
+                                </div>
+                                <div class="modal-footer w-100 d-flex flex-row justify-content-between p-2">
+                                    <button type="submit" class="btn btn-info text-light">Login</button>
+                                    <button type="button" class="btn btn-info ms-auto text-light" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ///////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="images/1-aswan.jpg" class="d-block w-100 vh-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.5);">
+                            <h3>Aswan</h3>
+                            <p>Aswan is a peaceful city in southern Egypt known for its beautiful Nile views. It has historic sites like Philae Temple and the Aswan High Dam. The Nubian culture adds a unique charm to the city.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="images/1-cairo.jpg" class="d-block w-100 vh-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.5);">
+                            <h3>Cairo</h3>
+                            <p>Cairo is a bustling city that blends ancient history with modern life. It’s home to the iconic pyramids, the Nile River, and vibrant markets. The city's energy and culture make it truly unforgettable.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="images/1-sharm.jpg" class="d-block w-100 vh-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.5);">
+                            <h3>Sharm Elshaikh</h3>
+                            <p>Sharm El-Sheikh is a famous resort city on the Red Sea. It's known for its stunning beaches, coral reefs, 
+                                and diving spots. The city offers a mix of relaxation and adventure in a beautiful setting.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="images/1-luxor.jpg" class="d-block w-100 vh-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.5);">
+                            <h3>Luxor</h3>
+                            <p>Luxor is often called the world’s greatest open-air museum. It’s home to ancient temples like Karnak and the Valley of the Kings. The city holds a rich legacy of Egypt’s pharaonic history.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="card w-100">
+                <div class="card-body  rounded-0 bg-info-subtle border-top">
+                    <h3 class="card-title">Discover Egypt with Ease</h3>
+                    <p class="card-text">Get ready to explore the wonders of Egypt! Whether you're looking for a quick getaway or a full 10-day adventure, 
+                        we’ve got you covered. Visit top destinations like Cairo and Alexandria, with all your travel needs taken care of—hotel bookings, 
+                        guided tours, and round-the-clock support included.</p>
+                    <a href="#" class="btn btn-lg btn-outline-info">Learn more</a>
+                </div>
+            </div>
+            <hr>
+            <div class="card w-100 mb-3 shadow border-0">
+                <div class="card-body  bg-dark text-light text-center">
+                    <h2 class="card-title fs-1">Popular destinations in Egypt</h2>
+                </div>
+            </div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed text-info bg-light bg-gradient shadow" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <h4>Sharm ElShaik</h4>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Sharm El-Sheikh is a famous resort city on the Red Sea. It's known for its stunning beaches, coral reefs, 
+                                and diving spots. The city offers <code>a mix of relaxation and adventure in a beautiful setting.</code>Sharm El-Sheikh is a top tourist destination known for its crystal-clear waters and vibrant coral reefs. 
+                                It’s famous for world-class diving and snorkeling spots like Ras Mohammed National Park. The city offers a variety of luxury resorts, exciting nightlife, and water sports activities. Visitors can enjoy desert safaris, 
+                                Bedouin cultural experiences, and stunning sunsets over the Red Sea. Sharm El-Sheikh is a perfect place for both relaxation and adventure, attracting travelers from around the world.</div>
+                    </div>
+                </div>
+                <div class="accordion-item shadow-lg">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed text-info bg-light bg-gradient shadow" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <h4>Alexanderia</h4>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Alexandria is a historic city on Egypt’s  <code>.Mediterranean coast.</code> It’s famous for its ancient library, beautiful beaches, and vibrant culture. The city perfectly blends history with a modern seaside vibe. 
+                            Alexandria was founded by Alexander the Great and served as a major center of learning and culture in ancient times. The city is home to the impressive Bibliotheca Alexandrina, a modern tribute to the ancient library. 
+                            Visitors can explore historic sites like the Qaitbay Citadel and the Roman Amphitheater. Alexandria’s corniche offers stunning views of the Mediterranean Sea, perfect for a relaxing walk. The city’s seafood cuisine is famous throughout Egypt, 
+                            attracting food lovers from all over. Alexandria remains a lively port city that beautifully mixes its rich history with a vibrant present.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed text-info bg-light bg-gradient shadow" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <h4>Aswan</h4>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Aswan is a peaceful city in southern Egypt known for its beautiful Nile views. It has historic sites like Philae Temple and the Aswan High Dam.<code>The Nubian culture adds a unique charm to the city.</code>
+                            Aswan is a serene city located on the banks of the Nile River in southern Egypt. It’s famous for its beautiful natural scenery, including the Nile islands and desert landscapes. The city is home to the impressive Aswan High Dam, 
+                            which controls the Nile’s flooding and provides hydroelectric power. Visitors can explore ancient sites like the Philae Temple, dedicated to the goddess Isis, and the Unfinished Obelisk. Aswan is also known for its rich Nubian culture, 
+                            colorful markets, and friendly local communities. A felucca boat ride on the Nile at sunset is one of the most peaceful experiences the city offers.</div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="card w-100 shadow border-0">
+                <div class="card-body  bg-dark text-light text-center ">
+                    <h2 class="card-title fs-1">Translate From Arabic To English</h2>
+                </div>
+            </div>
+            <div class="card w-100 shadow border-0">
+                <div class="card-body bg-light-subtle">
+                    <h4 class="text-info m-3">Write and translate <span class="text-info-emphasis">Press here</span></h4>
+                    <button type="button" class="btn btn-lg btn-outline-info m-3 btn-copy"data-bs-toggle="tooltip" data-bs-placement="right" title="Copy to clipboard" data-text="Text 1 to copy">Copy</button>
+                    <div class="form-floating mb-3 m-3">
+                        <textarea class="form-control" id="floatingTextarea2Disabled" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2Disabled">Translate:</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="card w-100 shadow border-0">
+                <div class="card-body  bg-dark text-light text-center">
+                    <h2 class="card-title fs-1">Translate From Arabic To French</h2>
+                </div>
+            </div>
+            <div class="card w-100 shadow border-0">
+                <div class="card-body bg-light-subtle">
+                    <h4 class="text-info m-3">Write and translate <span class="text-info-emphasis">Press here</span></h4>  
+                    <button type="button" class="btn btn-light m-3 text-info border border-light btn-copy" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy to clipboard" data-text="Text 2 to copy">Copy</button>
+                    <div class="form-floating mb-3 m-3">
+                        <textarea class="form-control" id="floatingTextarea2Disabled" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2Disabled">Translate:</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="card w-100 shadow border-0">
+                <div class="card-body  bg-dark text-light text-center">
+                    <h2 class="card-title fs-1">Translate From Arabic To Germany</h2>
+                </div>
+            </div>
+            <div class="card w-100 shadow border-0">
+                <div class="card-body bg-light-subtle">
+                    <h4 class="text-info m-3">Write and translate <span class="text-info-emphasis">Press here</span></h4>
+                    <button type="button" class="btn btn-light m-3 text-info border border-light btn-copy" data-bs-toggle="tooltip" data-bs-placement="right" title="Copy to clipboard" data-text="Text 3 to copy">Copy</button>
+                    <div class="form-floating mb-3 m-3">
+                        <textarea class="form-control" id="floatingTextarea2Disabled" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2Disabled">Translate:</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="card w-100 shadow-lg border-0">
+                <div class="box1 card-body bg-dark text-center p-5" style="height: 50vh;"></div>
+            </div>
+            <div class="card w-100 mb-3 shadow-lg border-0">
+                <div class="card-body  bg-dark text-light text-center">
+                    <h2 class="card-title display-2">Popular destinations in Egypt</h2>
+                </div>
+            </div>
+
+
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <div class="row justify-content-center w-100">
+
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center">
+                    <div class="card p-2 crd shadow-lg  bg-dark" style="width: 80%;">
+                        <img src="images/2-cairo.jpg" class="card-img-top h-100 w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Cairo</h5>
+                            <p class="card-text text-info">Full of life and culture.</p>
+                            <a href="#" class="btn btn-outline-info position-absolute z-3" style="top:73%; right:2%;">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center">
+                    <div class="card p-2 crd shadow-lg  bg-dark" style="width: 80%;">
+                        <img src="images/1-alex.jpg" class="card-img-top h-100 w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Alexanderia</h5>
+                            <p class="card-text text-info">Mediterranean charm.</p>
+                            <a href="#" class="btn btn-outline-info position-absolute z-3" style="top:73%; right:2%;">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center">
+                    <div class="card p-2 crd shadow-lg  bg-dark" style="width: 80%;">
+                        <img src="images/3-sharm.avif" class="card-img-top h-100 w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Sharm Elshaikh</h5>
+                            <p class="card-text text-info">Sunny city, beaches, diving spots.</p>
+                            <a href="#" class="btn btn-outline-info position-absolute z-3" style="top:73%; right:2%;">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center">
+                    <div class="card p-2 crd shadow-lg  bg-dark" style="width: 80%;">
+                        <img src="images/2-luxor.jpg" class="card-img-top h-100 w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Luxor</h5>
+                            <p class="card-text text-info">temples, tombs.</p>
+                            <a href="#" class="btn btn-outline-info position-absolute z-3" style="top:73%; right:2%;">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center">
+                    <div class="card p-2 crd shadow-lg  bg-dark" style="width: 80%;">
+                        <img src="images/3-aswan.jpg" class="card-img-top h-100 w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Aswan</h5>
+                            <p class="card-text text-info">Nubian culture, Nile views.</p>
+                            <a href="#" class="btn btn-outline-info position-absolute z-3" style="top:73%; right:2%;">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center">
+                    <div class="card p-2 crd shadow-lg  bg-dark" style="width: 80%;">
+                        <img src="images/1-hurghada.jpeg" class="card-img-top h-100 w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Hurghada</h5>
+                            <p class="card-text text-info">lively, seaside resort city.</p>
+                            <a href="#" class="btn btn-outline-info position-absolute z-3" style="top:73%; right:2%;">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center">
+                    <div class="card p-2 crd shadow-lg  bg-dark" style="width: 80%;">
+                        <img src="images/1-matrouh.avif" class="card-img-top h-100 w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Marsa Matrouh</h5>
+                            <p class="card-text text-info">turquoise waters, soft white sands.</p>
+                            <a href="#" class="btn btn-outline-info position-absolute z-3" style="top:73%; right:2%;">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center">
+                    <div class="card p-2 crd shadow-lg  bg-dark" style="width: 80%;">
+                        <img src="images/1-ras elbar.jpg" class="card-img-top h-100 w-100" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Raas ElBar</h5>
+                            <p class="card-text text-info">laid-back resort town at the Nile’s mouth.</p>
+                            <a href="#" class="btn btn-outline-info position-absolute z-3" style="top:73%; right:2%;">Know More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card w-100 shadow-lg">
+                <div class="box2 card-body bg-dark text-center p-5" style="height: 50vh;"></div>
+            </div>
+            <hr>
+            <div class="card w-100 mb-3 shadow-lg border-0">
+                <div class="card-body  bg-dark text-light text-center">
+                    <h2 class="card-title display-5">Unmissable Places to Visit in Egypt</h2>
+                </div>
+            </div>
+
+
+            <!-- /////////////////////////////////////////////////////////////////////////////////////// -->
+            <div class="row justify-content-center w-100">
+
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center">
+                    <div class="card-photo photo1 card p-2 shadow-lg border-0" style="width: 85%; height:550px;">
+                        <div class="card-body body position-absolute z-2 h-75">
+                            <h5 class="card-title text-light">The Timeless Majesty of Ancient Egypt</h5>
+                            <p class="card-text text-light"><i class="far fa-clock"></i> Jan 12, 2023</p>
+                        </div>
+                        
+                        <div class="card-body position-absolute z-2 h-50" style="margin-top: 100px;">
+                            <img src="images/3-luxor.jpg" class="small-photo w-50 h-100 mt-5 mb-3" alt="...">
+                            <h5 class="card-title text-info">The Beauty of Luxor</h5>
+                            <p class="card-text text-light">Luxor, often called the world’s greatest open-air museum which tells the story of Luxor from the old kingdom tell the Islamic Period.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center">
+                    <div class="card-photo photo2 card p-2 shadow-lg border-0" style="width: 85%; height:550px;">
+                        <div class="card-body body position-absolute z-2 h-75">
+                            <h5 class="card-title text-light">Explore a Nubian Village</h5>
+                            <p class="card-text text-light"><i class="far fa-clock"></i> January 18, 2024</p>
+                        </div>
+                        
+                        <div class="card-body position-absolute z-2 h-50" style="margin-top: 100px;">
+                            <img src="images/4-aswan.jpg" class="small-photo w-50 h-100 mt-5 mb-3" alt="...">
+                            <h5 class="card-title text-info">Visit Elephantine Island by local ferry</h5>
+                            <p class="card-text text-light">Take a felucca to Elephantine Island to explore a colorful Nubian village lined with brightly-painted homesX</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center">
+                    <div class="card-photo photo3 card p-2 shadow-lg border-0" style="width: 85%; height:550px;">
+                        <div class="card-body body position-absolute z-2 h-75">
+                            <h5 class="card-title text-light">Discover unforgettable Sharm El Sheikh</h5>
+                            <p class="card-text text-light"><i class="far fa-clock"></i> October 23, 2023</p>
+                        </div>
+                        
+                        <div class="card-body position-absolute z-2 h-50" style="margin-top: 100px;">
+                            <img src="images/4-sharm.jpg" class="small-photo w-50 h-100 mt-5 mb-3" alt="...">
+                            <h5 class="card-title text-info">Set beside the Red Sea’s crystalline waters</h5>
+                            <p class="card-text text-light">Sharm is the perfect destination for both relaxation and adventure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <hr>
+
+            <div class="card-body text-info-emphasis text-center mt-5 ">
+                <h2 class="card-title display-4">Nile Dreams and Sea Breezes: Journey Through Egypt</h2>
+            </div>
+
+            <div class="ad-box container rounded-3 p-5 border-0">
+                <div class="row align-items-center border-0 rounded-3" style="background-color: rgb(239, 239, 239);">
+                    <div class=" container flex-column justify-content-center align-items-center p-0 rounded-3 bg-dark shadow-lg border border-info">
+                        <div class="col-12 d-block d-md-none text-center">
+                            <img src="images/2-cairo.jpg" class="img-fluid rounded-top-3" alt="Normal">
+                        </div>
+                        <div class="row w-100 h-100 rounded-3 overflow-hidden m-0 d-flex justify-content-between">
+                            <div class="col-12 col-md-6 p-4 bg-dark text-info d-flex flex-column justify-content-center">
+                                <h2 class="mb-3">Stories from the Heart of Egypt - Cairo</h2>
+                                <p><i class="fas fa-calendar-alt"></i> Wed, March 26, 2025</p>
+                                <div class="progress bg-dark w-25 mb-3" style="height: 5px;">
+                                    <div class="progress-bar bg-info" style="width: 20%; transition: width 0.5s;"></div>
+                                </div>
+                                <p>Cairo is a city where ancient history meets modern life. 
+                                    From the towering pyramids to bustling street markets, every corner tells a story. Its people are known for their warmth, 
+                                    resilience, and deep-rooted culture. Whether day or night, Cairo never sleeps — it is always full of energy and life.</p>
+                                <div class="d-flex flex-row justify-content-start w-100">
+                                    <a href="#" class="btn btn-outline-info me-3 w-25 disabled" tabindex="-1" aria-disabled="true"><i class="fas fa-tag"></i> Podcast</a>
+                                    <a href="#" class="btn btn-outline-info me-3 w-25 disabled" tabindex="-1" aria-disabled="true"><i class="fas fa-clock"></i> 55 mins</a>
+                                    <a href="#" class="btn btn-outline-info me-3 w-25"><i class="fas fa-play"></i> Play Episode</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-none d-md-block p-0 bg-dark rounded-end-3 ">
+                                <div class="h-100 w-75 position-relative ms-auto" style="clip-path: polygon(0 0, 10% 100%, 100% 100%, 100% 0); overflow: hidden;">
+                                    <img src="images/2-cairo.jpg" class="w-100 h-100 object-fit-cover rounded-end-3 " alt="Slanted">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ad-box container rounded-3 p-5 border-0">
+                <div class="row align-items-center border-0 rounded-3" style="background-color: rgb(239, 239, 239);">
+                    <div class=" container flex-column justify-content-center align-items-center p-0 rounded-3 bg-dark shadow-lg border border-info">
+                        <div class="col-12 d-block d-md-none text-center">
+                            <img src="images/3-aswan.jpg" class="img-fluid rounded-top-3" alt="Normal">
+                        </div>
+                        <div class="row w-100 h-100 rounded-3 overflow-hidden m-0 d-flex justify-content-between">
+
+                            <div class="col-md-6 d-none d-md-block p-0 bg-dark rounded-start-3 ">
+                                <div class="h-100 w-75 position-relative me-auto" style="clip-path: polygon(0 0, 0 100%, 90% 100%, 100% 0); overflow: hidden;">
+                                    <img src="images/3-aswan.jpg" class="w-100 h-100 object-fit-cover rounded-start-3 " alt="Slanted">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 p-4 bg-dark text-info d-flex flex-column justify-content-center">
+                                <h2 class="mb-3">Discover the Magic of Aswan</h2>
+                                <p><i class="fas fa-calendar-alt"></i> Wed, March 26, 2025</p>
+                                <div class="progress bg-dark w-25 mb-3" style="height: 5px;">
+                                    <div class="progress-bar bg-warning" style="width: 20%; transition: width 0.5s;"></div>
+                                </div>
+                                <p>Escape to Aswan, where the Nile flows gently through golden deserts and lush islands. Explore ancient temples like Philae, 
+                                    sail on a traditional felucca at sunset, and experience the warm hospitality of the Nubian people. Whether you’re seeking history, 
+                                    culture, or pure relaxation—Aswan is the peaceful getaway you’ve been dreaming of. Come feel the beauty of southern Egypt!</p>
+                                <div class="d-flex flex-row justify-content-start w-100">
+                                    <a href="#" class="btn btn-outline-info me-3 w-25 disabled" tabindex="-1" aria-disabled="true"><i class="fas fa-tag"></i> Podcast</a>
+                                    <a href="#" class="btn btn-outline-info me-3 w-25 disabled" tabindex="-1" aria-disabled="true"><i class="fas fa-clock"></i> 55 mins</a>
+                                    <a href="#" class="btn btn-outline-info me-3 w-25"><i class="fas fa-play"></i> Play Episode</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ad-box container rounded-3 p-5 border-0">
+                <div class="row align-items-center border-0 rounded-3" style="background-color: rgb(239, 239, 239);">
+                    <div class=" container flex-column justify-content-center align-items-center p-0 rounded-3 bg-dark shadow-lg border border-info">
+                        <div class="col-12 d-block d-md-none text-center">
+                            <img src="images/2-alex.jpg" class="img-fluid rounded-top-3" alt="Normal">
+                        </div>
+                        <div class="row w-100 h-100 rounded-3 overflow-hidden m-0 d-flex justify-content-between">
+                            <div class="col-12 col-md-6 p-4 bg-dark text-info d-flex flex-column justify-content-center">
+                                <h2 class="mb-3">Experience the Charm of Alexandria</h2>
+                                <p><i class="fas fa-calendar-alt"></i> Tue, Jan 21, 2025</p>
+                                <div class="progress bg-dark w-25 mb-3" style="height: 5px;">
+                                    <div class="progress-bar bg-danger-subtle" style="width: 20%; transition: width 0.5s;"></div>
+                                </div>
+                                <p>Discover Alexandria, the jewel of the Mediterranean! Walk along the scenic corniche, explore historic landmarks like the Citadel of Qaitbay 
+                                    and the legendary Bibliotheca Alexandrina, and enjoy delicious seafood by the sea. With its rich history and modern coastal vibe, 
+                                    Alexandria offers the perfect blend of culture, relaxation, and beauty. Come feel the breeze and the stories of the past!</p>
+                                <div class="d-flex flex-row justify-content-start w-100">
+                                    <a href="#" class="btn btn-outline-info me-3 w-25 disabled" tabindex="-1" aria-disabled="true"><i class="fas fa-tag"></i> Podcast</a>
+                                    <a href="#" class="btn btn-outline-info me-3 w-25 disabled" tabindex="-1" aria-disabled="true"><i class="fas fa-clock"></i> 55 mins</a>
+                                    <a href="#" class="btn btn-outline-info me-3 w-25"><i class="fas fa-play"></i> Play Episode</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-none d-md-block p-0 bg-dark rounded-end-3 ">
+                                <div class="h-100 w-75 position-relative ms-auto" style="clip-path: polygon(0 0, 10% 100%, 100% 100%, 100% 0); overflow: hidden;">
+                                    <img src="images/2-alex.jpg" class="w-100 h-100 object-fit-cover rounded-end-3 " alt="Slanted">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ad-box container rounded-3 p-5 border-0">
+                <div class="row align-items-center border-0 rounded-3" style="background-color: rgb(239, 239, 239);">
+                    <div class=" container flex-column justify-content-center align-items-center p-0 rounded-3 bg-dark shadow-lg border border-info">
+                        <div class="col-12 d-block d-md-none text-center">
+                            <img src="images/2-ras elbar.jpg" class="img-fluid rounded-top-3" alt="Normal">
+                        </div>
+                        <div class="row w-100 h-100 rounded-3 overflow-hidden m-0 d-flex justify-content-between">
+
+                            <div class="col-md-6 d-none d-md-block p-0 bg-dark rounded-start-3 ">
+                                <div class="h-100 w-75 position-relative me-auto" style="clip-path: polygon(0 0, 0 100%, 90% 100%, 100% 0); overflow: hidden;">
+                                    <img src="images/2-ras elbar.jpg" class="w-100 h-100 object-fit-cover rounded-start-3 " alt="Slanted">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 p-4 bg-dark text-info d-flex flex-column justify-content-center">
+                                <h2 class="mb-3">Ras El-Bar – Where the Nile Meets the Sea</h2>
+                                <p><i class="fas fa-calendar-alt"></i> Mon, jul 20, 2022</p>
+                                <div class="progress bg-dark w-25 mb-3" style="height: 5px;">
+                                    <div class="progress-bar bg-success" style="width: 20%; transition: width 0.5s;"></div>
+                                </div>
+                                <p>Tucked away at the meeting point of the Nile River and the Mediterranean Sea, Ras El-Bar is a charming coastal city perfect for a peaceful getaway. 
+                                    Known for its fresh air, soft sandy beaches, and relaxed atmosphere, it’s a favorite summer destination for families and nature lovers. Stroll along the corniche, 
+                                    enjoy fresh seafood straight from the sea, and catch unforgettable sunsets over the water.</p>
+                                <div class="d-flex flex-row justify-content-start w-100">
+                                    <a href="#" class="btn btn-outline-info me-3 w-25 disabled" tabindex="-1" aria-disabled="true"><i class="fas fa-tag"></i> Podcast</a>
+                                    <a href="#" class="btn btn-outline-info me-3 w-25 disabled" tabindex="-1" aria-disabled="true"><i class="fas fa-clock"></i> 55 mins</a>
+                                    <a href="#" class="btn btn-outline-info me-3 w-25"><i class="fas fa-play"></i> Play Episode</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body text-info-emphasis text-center m-5 ">
+                <h2 class="card-title display-4">JOIN US</h2>
+            </div>
+           
+            <div class="container g-5">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3 mb-5">
+                        <div class="bg-dark-subtle  shadow text-center text-bg-dark rounded-5 border border-info">
+                            <h2 class="p-3 text-shadow">Subscribe Now</h2>
+                            <img class="img-fluid w-50 h-50 rounded-5 shadow" src="images/icon-twiter.png" alt="">
+                            <h3 class="p-3 text-shadow">Go To Link</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-5">
+                        <div class="bg-dark-subtle shadow text-center text-bg-dark rounded-5 border border-info">
+                            <h2 class="p-3 text-shadow">Subscribe Now</h2>
+                            <img class="img-fluid w-50 h-50 rounded-5 shadow" src="images/icon-whats.png" alt="">
+                            <h3 class="p-3 text-shadow">Go To Link</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-5">
+                        <div class="bg-dark-subtle  shadow text-center text-bg-dark rounded-5 border border-info">
+                            <h2 class="p-3 text-shadow">Subscribe Now</h2>
+                            <img class="img-fluid w-50 h-50 rounded-5 shadow" src="images/icon-in.png" alt="">
+                            <h3 class="p-3 text-shadow">Go To Link</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-5">
+                        <div class="bg-dark-subtle  shadow text-center text-bg-dark rounded-5 border border-info">
+                            <h2 class="p-3 text-shadow">Subscribe Now</h2>
+                            <img class="img-fluid w-50 h-50 rounded-5 shadow" src="images/icon-instagram.png" alt="">
+                            <h3 class="p-3 text-shadow">Go To Link</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row justify-content-center w-100 border-top border-info bg-dark-subtle text-info-emphasis">
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3 d-flex justify-content-center">
+                    <div class="p-2 border-0 w-100 text-center">
+                        <div class="d-flex justify-content-center align-items-center border-top border-bottom border-info pt-3 pb-3 p mt-3 mb-4">
+                            <img class="w-25 h-75 rounded-circle shadow me-3" src="images/logo.jpg" alt="">
+                            <h2>Contact Us</h2>
+                        </div>
+                        <a href="#" class="text-info-emphasis text-decoration-none press"><h6 class="m-3">Tel: 000-000-000</h6></a>
+                        <a href="#" class="text-info-emphasis text-decoration-none press"><h6 class="m-3">Adress: Egypt</h6></a>
+                        <a href="#" class="text-info-emphasis text-decoration-none press"><h6 class="m-3">Fax: 111-111-111</h6></a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3 d-flex justify-content-center">
+                    <div class="p-2 border-0 w-100 text-center">
+                        <div class="d-flex justify-content-center align-items-center border-top border-bottom border-info pt-3 pb-3 p mt-3 mb-4">
+                            <img class="w-25 h-75 rounded-circle shadow me-3" src="images/logo.jpg" alt="">
+                            <h2>Important Links</h2>
+                        </div>
+                        <a href="#" class="text-info-emphasis text-decoration-none press"><h6 class="m-3">Visit us</h6></a>
+                        <a href="#" class="text-info-emphasis text-decoration-none press"><h6 class="m-3">Take a look</h6></a>
+                        <a href="#" class="text-info-emphasis text-decoration-none press"><h6 class="m-3">Enjoy your trip</h6></a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-3 d-flex justify-content-center">
+                    <div class="p-2 border-0 w-100 text-center">
+                        <div class="d-flex justify-content-center align-items-center border-top border-bottom border-info pt-3 pb-3 p mt-3 mb-4">
+                            <img class="w-25 h-75 rounded-circle shadow me-3" src="images/logo.jpg" alt="">
+                            <h2>Vision</h2>
+                        </div>
+                        <a href="#" class="text-info-emphasis text-decoration-none press"><h6 class="m-3">Services for all</h6></a>
+                        <a href="#" class="text-info-emphasis text-decoration-none press"><h6 class="m-3">Best Quality</h6></a>
+                        <a href="#" class="text-info-emphasis text-decoration-none press"><h6 class="m-3">commitment to excellence</h6></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center w-100 border-top border-bottom border-info bg-dark-subtle text-light p-2">
+                <h3 class="text-shadow">Copyright © Egypt Tour Company 2025</h3>
+            </div>
+            <div class="row bg-dark-subtle w-100 p-4"></div>
+
+        </div>
+        <script src="js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    </body>
+</html>

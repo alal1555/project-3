@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    background-color: rgb(239, 239, 239);
+}
+.trips:hover{
+    transform: scale(1.05);
+}
+.trips:hover .spn{
+    color: rgb(0, 238, 255) !important;
+    font-weight: bold;
+}
+.icon{
+    font-size: 60px !important;
+}
+.icon:hover{
+    color: rgb(0, 238, 255) !important;
+}
+.box1{
+    background-image: url('../images/2-aswan.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+.crd::after{
+    content:"";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0 , 0.2);
+    border: 0;
+    border-radius: 5px;
+}
+.crd:hover::after{
+    width: 100%;
+    height: 100%;
+    transition: 0.8s;
+}
+.crd::before{
+    content:"";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0 , 0.2);
+    border: 0;
+    border-radius: 5px;
+}
+.crd:hover::before{
+    width: 100%;
+    height: 100%;
+    transition: 0.8s;
+}
+.box2{
+    background-image: url('../images/1-pyramids.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+.small-photo{
+    border-radius: 50%;
+}
+.card-photo{
+    background-size: cover;
+    transition: 0.5s;
+}
+.card-photo:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0 , 0.4);
+    border-radius: 5px;
+}
+.photo1{
+    background-image: url('../images/3-luxor.jpg');
+}
+.photo2{
+    background-image: url('../images/4-aswan.jpg');
+}
+.photo3{
+    background-image: url('../images/4-sharm.jpg');
+}
+.card-photo:hover{
+    transform: scale(0.9);
+}
+.body{
+    transition: 0.5s;
+}
+.card-photo:hover .body{
+    transform: translate(0, 30px);
+}
+.ad-box:hover .progress-bar {
+  width: 100% !important;
+}
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+}
+.press:hover{
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+}
